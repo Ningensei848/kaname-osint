@@ -1,0 +1,17 @@
+{
+	"id": "evt_pages_deploy_success_20260527",
+	"project_name": "osint-kaname",
+	"deployment": {
+		"id": "deploy_id_98765",
+		"url": "https://osint-kaname.pages.dev",
+		"environment": "production",
+		"status": "success",
+		"created_on": "2026-05-27T09:45:00Z",
+		"modified_on": "2026-05-27T09:50:00Z",
+		"meta": {
+			"branch": "main",
+			"commit_hash": "a1b2c3d4e5f6g7h8i9j0",
+			"commit_message": "[Aegis-Reviewer] Self-Merge: Intelligence Update Passed Review"
+		}
+	}
+}

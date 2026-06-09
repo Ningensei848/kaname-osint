@@ -1,0 +1,19 @@
+{
+	"ssot_sources": [
+		{
+			"id": "jpcert_cc",
+			"name": "JPCERT/CC",
+			"url": "https://www.jpcert.or.jp/",
+			"feed_url": "https://www.jpcert.or.jp/rss/jpcert.rdf",
+			"description": "国内のコンピュータセキュリティインシデント対応組織",
+			"meta_url": "https://www.jpcert.or.jp/about/",
+			"custom_extraction_instruction": "脆弱性注意喚起とインシデント対応情報を優先する"
+		},
+		{
+			"id": "nisc",
+			"name": "内閣サイバーセキュリティセンター",
+			"url": "https://www.nisc.go.jp/",
+			"description": "政府全体のサイバーセキュリティ政策情報源"
+		}
+	]
+}

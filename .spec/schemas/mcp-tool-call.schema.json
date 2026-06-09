@@ -1,0 +1,52 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://kaname.local/schemas/mcp-tool-call.schema.json",
+	"title": "kaname GitHub MCP JSON-RPC tool call envelope",
+	"type": "object",
+	"additionalProperties": false,
+	"required": ["jsonrpc", "method", "params", "id"],
+	"properties": {
+		"jsonrpc": {
+			"type": "string",
+			"const": "2.0"
+		},
+		"method": {
+			"type": "string",
+			"const": "tools/call"
+		},
+		"id": {
+			"type": "integer"
+		},
+		"params": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": ["name", "arguments"],
+			"properties": {
+				"name": {
+					"type": "string",
+					"enum": [
+						"create_or_update_file",
+						"create_pull_request",
+						"merge_pull_request",
+						"create_issue"
+					]
+				},
+				"arguments": {
+					"type": "object",
+					"required": ["owner", "repo"],
+					"additionalProperties": true,
+					"properties": {
+						"owner": {
+							"type": "string",
+							"minLength": 1
+						},
+						"repo": {
+							"type": "string",
+							"minLength": 1
+						}
+					}
+				}
+			}
+		}
+	}
+}

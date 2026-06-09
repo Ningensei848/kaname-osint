@@ -1,0 +1,17 @@
+{
+	"id": "evt_pages_deploy_failure_20260527",
+	"project_name": "osint-kaname",
+	"deployment": {
+		"id": "deploy_failure_98765",
+		"url": "https://osint-kaname.pages.dev",
+		"environment": "production",
+		"status": "failure",
+		"created_on": "2026-05-27T09:45:00Z",
+		"modified_on": "2026-05-27T09:50:00Z",
+		"meta": {
+			"branch": "main",
+			"commit_hash": "deadbeef1234567",
+			"commit_message": "[Aegis-Reviewer] Self-Merge: Intelligence Update Failed Build"
+		}
+	}
+}

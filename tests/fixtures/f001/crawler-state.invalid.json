@@ -1,0 +1,12 @@
+{
+	"last_execution": "not-a-date-time",
+	"sources": {
+		"jpcert_cc": {
+			"last_checked": "2026-05-27T09:00:00.000Z",
+			"content_hash": "short-hash",
+			"last_modified_header": null,
+			"unexpected_mutable_field": true
+		}
+	},
+	"unexpected_root_field": "must be rejected"
+}

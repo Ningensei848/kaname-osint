@@ -1,0 +1,28 @@
+{
+	"name": "kaname-osint",
+	"version": "1.0.0",
+	"description": "Autonomous cybersecurity knowledge orchestrator",
+	"main": "dist/orchestrator.js",
+	"type": "commonjs",
+	"scripts": {
+		"dev": "tsx src/orchestrator.ts",
+		"build": "tsx -e \"import { buildSync } from 'esbuild'; buildSync({ entryPoints: ['src/orchestrator.ts'], bundle: true, platform: 'node', target: 'node20', outfile: 'dist/orchestrator.js' })\"",
+		"format": "biome format --write package.json tsconfig.json src tests",
+		"lint": "biome lint package.json tsconfig.json src tests",
+		"test": "node --import tsx --test tests/**/*.test.ts",
+		"typecheck": "tsc --noEmit",
+		"test:integration:artifacts": "node --import tsx --test tests/integration/**/*.integration.ts"
+	},
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"yaml": "^2.4.5"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.16",
+		"@types/node": "^20.12.12",
+		"esbuild": "^0.21.3",
+		"tsx": "^4.11.0",
+		"typescript": "^5.4.5"
+	},
+	"packageManager": "pnpm@11.5.1"
+}

@@ -1,0 +1,15 @@
+{
+	"ssot_sources": [
+		{
+			"id": "Invalid-ID",
+			"name": "Invalid Source",
+			"url": "not-a-url",
+			"description": "ID pattern and URI format are invalid"
+		},
+		{
+			"id": "missing_description",
+			"name": "Missing Description",
+			"url": "https://example.invalid/"
+		}
+	]
+}

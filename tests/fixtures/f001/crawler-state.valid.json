@@ -1,0 +1,15 @@
+{
+	"last_execution": "2026-05-27T09:00:00.000Z",
+	"sources": {
+		"jpcert_cc": {
+			"last_checked": "2026-05-27T09:00:00.000Z",
+			"content_hash": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+			"last_modified_header": "Wed, 27 May 2026 09:00:00 GMT"
+		},
+		"nisc": {
+			"last_checked": "2026-05-27T09:05:00.000Z",
+			"content_hash": "abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789",
+			"last_modified_header": null
+		}
+	}
+}

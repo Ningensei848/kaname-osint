@@ -1,0 +1,16 @@
+{
+	"jsonrpc": "2.0",
+	"method": "tools/call",
+	"params": {
+		"name": "create_or_update_file",
+		"arguments": {
+			"owner": "Ningensei848",
+			"repo": "kaname-vault",
+			"path": "topics/gov-agencies/NCO.md",
+			"content": "# unsafe direct write",
+			"branch": "main",
+			"message": "[Aegis-Writer] Unsafe direct main write"
+		}
+	},
+	"id": 201
+}

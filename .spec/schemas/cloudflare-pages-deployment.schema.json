@@ -1,0 +1,49 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://kaname.local/schemas/cloudflare-pages-deployment.schema.json",
+	"title": "Kaname Cloudflare Pages deployment event",
+	"type": "object",
+	"additionalProperties": false,
+	"required": ["id", "project_name", "deployment"],
+	"properties": {
+		"id": { "type": "string", "minLength": 1 },
+		"project_name": { "type": "string", "minLength": 1 },
+		"deployment": {
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"id",
+				"url",
+				"environment",
+				"status",
+				"created_on",
+				"modified_on",
+				"meta"
+			],
+			"properties": {
+				"id": { "type": "string", "minLength": 1 },
+				"url": { "type": "string", "format": "uri" },
+				"environment": { "type": "string", "enum": ["production", "preview"] },
+				"status": {
+					"type": "string",
+					"enum": ["success", "failure", "pending", "skipped", "canceled"]
+				},
+				"created_on": { "type": "string", "format": "date-time" },
+				"modified_on": { "type": "string", "format": "date-time" },
+				"meta": {
+					"type": "object",
+					"additionalProperties": false,
+					"required": ["branch", "commit_hash", "commit_message"],
+					"properties": {
+						"branch": { "type": "string", "minLength": 1 },
+						"commit_hash": {
+							"type": "string",
+							"pattern": "^[A-Za-z0-9]{7,64}$"
+						},
+						"commit_message": { "type": "string", "minLength": 1 }
+					}
+				}
+			}
+		}
+	}
+}

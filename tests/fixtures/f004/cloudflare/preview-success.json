@@ -1,0 +1,17 @@
+{
+	"id": "evt_pages_preview_success_20260527",
+	"project_name": "osint-kaname",
+	"deployment": {
+		"id": "deploy_preview_12345",
+		"url": "https://preview.osint-kaname.pages.dev",
+		"environment": "preview",
+		"status": "success",
+		"created_on": "2026-05-27T09:45:00Z",
+		"modified_on": "2026-05-27T09:50:00Z",
+		"meta": {
+			"branch": "feature/f004-preview",
+			"commit_hash": "preview1234567890",
+			"commit_message": "Preview build"
+		}
+	}
+}

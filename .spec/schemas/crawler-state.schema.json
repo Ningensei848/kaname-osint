@@ -1,0 +1,35 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://kaname.local/schemas/crawler-state.schema.json",
+	"title": "kaname external crawler state",
+	"type": "object",
+	"additionalProperties": false,
+	"required": ["last_execution", "sources"],
+	"properties": {
+		"last_execution": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"sources": {
+			"type": "object",
+			"additionalProperties": {
+				"type": "object",
+				"additionalProperties": false,
+				"required": ["last_checked", "content_hash", "last_modified_header"],
+				"properties": {
+					"last_checked": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"content_hash": {
+						"type": "string",
+						"pattern": "^[0-9a-f]{64}$"
+					},
+					"last_modified_header": {
+						"type": ["string", "null"]
+					}
+				}
+			}
+		}
+	}
+}
